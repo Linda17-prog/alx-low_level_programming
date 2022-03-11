@@ -5,12 +5,10 @@
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	int i;
 	int j;
-
 	i = 48;
 	j = 49;
 	
@@ -38,8 +36,6 @@ int main(void)
 				j = 1 + i;
 			}
 		}
-
 	}
-
 	return (0);
 }
