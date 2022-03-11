@@ -8,29 +8,38 @@
 
 int main(void)
 {
-	int a, b;
+	int i;
+	int j;
 
-	for (a = 48; a < 58; a++)
+	i = 48;
+	j = 49;
+	
+	while  ((i < 57) && (j < 58))
 	{
-		for (b = 48; b < 58; b++)
+		putchar(i);
+		putchar(j);
+		if ((i == 56) && (j == 57))
 		{
-			if (a == b)
+			putchar('\n');
+			i++;
+			j++;
+		}
+		else
+		{
+			putchar(44);
+			putchar(32);
+			if (j < 57)
 			{
-				continue;
-			}
-			putchar(a);
-			putchar(b);
-			if (a == 56 && b ==57)
-			{
-				break;
+				j++;
 			}
 			else
 			{
-				putchar(',');
-				putchar(' ');
+				i++;
+				j = 1 + i;
 			}
 		}
+
 	}
-	putchar('\n');
+
 	return (0);
 }
