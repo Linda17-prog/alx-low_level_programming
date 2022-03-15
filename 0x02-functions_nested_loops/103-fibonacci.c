@@ -12,7 +12,7 @@ int main(void)
 	long int first = 1;
 	long int second = 1;
 	long int sum = 2 ;
-	long long int total;
+	long int total;
 
 	for (i = 1; i < 4000000; i++)
 	{
@@ -23,7 +23,7 @@ int main(void)
 		second = sum;
 	}
 
-	printf("%1lld\n", total);
+	printf("%1ld\n", total);
 
 	return(0);
 }
