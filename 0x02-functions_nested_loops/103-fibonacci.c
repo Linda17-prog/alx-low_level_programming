@@ -23,7 +23,7 @@ int main(void)
 		second = sum;
 	}
 
-	printf("%1ld\n", total);
+	printf("%ld\n", total);
 
 	return (0);
 }
