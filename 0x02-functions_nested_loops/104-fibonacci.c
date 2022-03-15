@@ -3,7 +3,7 @@
 /**
  * main - Print first 98 Fibonnaci numbers
  *
- * Return; Always 0
+ * Return: Always 0
  */
 
 int main(void)
