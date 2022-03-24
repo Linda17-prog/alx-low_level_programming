@@ -2,7 +2,7 @@
 
 /**
  * string_toupper - Converts all lowercase characters for uppercase
- * @a: string
+ * @s: string
  *
  * Return: String as a pointer
  */
