@@ -4,17 +4,17 @@
  * string_toupper - Converts all lowercase characters for uppercase
  * @s: string
  *
- * Return: String as a pointer
+ * Return: String as pointer
  */
 
 char *string_toupper(char *s)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0';i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] >= 'a' && s[i] <= 'z')
-			s[i] -=32;
+			s[i] -= 32;
 	}
 	return (s);
 }
