@@ -4,23 +4,30 @@
  * *_strncat - Concatenates two strings with n bytes from src
  * @dest: String to be appended
  * @src: String to append
- *
- * Return: Pointeer to the resulting string dest
+ * @n: integers
+ * Return: Pointer to the resulting string dest
  */
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0;
-	int j = 0;
+	int m;
+	int i;
 
-	while (*(dest + i))
-		i++;
-	while ((src + j < src + n) && *(src + j) != '\0')
+	m = 0;
+
+	for (i = 0; i < 1000; i++)
 	{
-		*(dest + i) = *(src + j);
-		i++;
-		j++;
+		if (dest[i] == '\0')
+		{
+			break;
+		}
+		m++;
 	}
 
+	for (i = 0; src[i] != '\0' && i < n; i++)
+	{
+		dest[m + i] = src[i];
+	}
+	dest[m + i] = '\0';
 	return (dest);
 }
