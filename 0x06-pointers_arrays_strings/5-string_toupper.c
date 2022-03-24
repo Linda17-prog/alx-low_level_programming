@@ -7,15 +7,15 @@
  * Return: String as a pointer
  */
 
-char *string_toupper(char *a)
+char *string_toupper(char *s)
 {
-	int i = 0;
+	int i;
 
-	while (*(a + 1))
+	for (i = 0; s[i] != '\0';i++)
 	{
-		if (*(a + i) >= 'a' && *a <= 'z')
-			*(a + i) -= 32;
-		i++;
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] -=32;
 	}
-	return (a);
+	return (s);
 }
+
