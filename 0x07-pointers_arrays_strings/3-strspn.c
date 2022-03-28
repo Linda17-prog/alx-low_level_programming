@@ -10,42 +10,22 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i;
-	int j;
-	unsigned int counter = 0;
-	int len_long_str = strleng(s);
-	int len_accept = strleng(accept);
+	unsigned int i, j, a_len = 0, len = 0;
 
-	for (i = 0; i < len_long_str - 1; i++)
+	while (accept[a_len] != '\0')
+		a_len++;
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j < len_accept; j++)
+		for (j = 0; j < a_len; j++)
 		{
-			if(*(s + i) == *(accept + j))
-			{
-				counter ++;
-				break;
-			}
-			if (*(accept + j) == '\0')
-				return (counter);
+			if (s[i] == accept[j])
+				len++, j = a_len;
+			else
+				if (j == a_len - 1)
+					goto exit;
 		}
 	}
-	return (counter);
+exit: return (len);
 }
 
-/**
- * strleng - Function that gets the length of a string
- * @a: Pointer to a string
- * Return: Length of a string
- */
 
-int strleng(char *a)
-{
-	int i = 0;
-
-	while (a[i] != '\0')
-	{
-		i++;
-	}
-	i++;
-	return (i);
-}
