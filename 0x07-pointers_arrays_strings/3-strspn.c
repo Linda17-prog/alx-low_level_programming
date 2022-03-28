@@ -27,5 +27,3 @@ unsigned int _strspn(char *s, char *accept)
 	}
 exit: return (len);
 }
-
-
